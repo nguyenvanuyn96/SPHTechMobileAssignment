@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.view.backgroundColor = UIColor.white
-        self.navigationItem.title = "SPH-Assignment"
+        self.navigationItem.title = "Mobile Data Usage"
     }
 
 

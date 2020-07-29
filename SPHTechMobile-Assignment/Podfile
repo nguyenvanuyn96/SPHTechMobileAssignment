@@ -1,0 +1,25 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'SPHTechMobile-Assignment' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for SPHTechMobile-Assignment
+  pod 'SnapKit', '~> 5.0.0'
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
+  pod 'RxDataSources'
+  pod 'RealmSwift' 
+  pod 'Reusable'
+
+  target 'SPHTechMobile-AssignmentTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'SPHTechMobile-AssignmentUITests' do
+    # Pods for testing
+  end
+
+end

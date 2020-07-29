@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MobileDataUsage: Codable {
+struct MobileDataUsageResponse: Codable {
     let help: String?
     let isSuccess: Bool?
     var result: MobileDataResult?

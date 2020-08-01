@@ -28,7 +28,7 @@ protocol MobileDataUsageViewToPresenterProtocol: class {
 }
 
 protocol MobileDataUsagePresenterToViewProtocol {
-    var datasourceDrv: Driver<[MobileDataUsageSection]> { get }
+    var dataSourceDrv: Driver<[MobileDataUsageSection]> { get }
     
     var showLoadingDrv: Driver<Bool> { get }
     var endInfiniteScrollDrv: Driver<Bool> { get }

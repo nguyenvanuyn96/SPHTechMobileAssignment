@@ -8,10 +8,44 @@
 
 import Foundation
 
-struct Record: Codable {
+class Record: Codable {
     let volumeOfMobileData: String?
     let quarter: String?
     let id: Int?
+    
+    private(set) lazy var volume: Double = {
+        guard let volume = self.volumeOfMobileData else { return 0 }
+        
+        return Double(volume) ?? 0
+    }()
+    
+    private(set) lazy var quarterYear: Int? = {
+        guard let quarterComponents = self.quarterComponents else { return nil }
+        
+        guard let quarterYearStr = quarterComponents.first else { return nil }
+        
+        return Int(quarterYearStr)
+    }()
+    
+    private(set) lazy var quarterNumber: Int? = {
+        guard let quarterComponents = self.quarterComponents else { return nil }
+        
+        guard var quarterNumberStr = quarterComponents.last else { return nil }
+        
+        quarterNumberStr.removeFirst(1)
+        
+        return Int(quarterNumberStr)
+    }()
+    
+    private lazy var quarterComponents: [String]? = {
+        return self.quarter?.components(separatedBy: "-")
+    }()
+    
+    init(volumeOfMobileData: String?, quarter: String?, id: Int?) {
+        self.volumeOfMobileData = volumeOfMobileData
+        self.quarter = quarter
+        self.id = id
+    }
     
     enum CodingKeys: String, CodingKey {
         case volumeOfMobileData = "volume_of_mobile_data"

@@ -11,6 +11,7 @@ import RxDataSources
 
 enum MobileDataUsageSectionIndex: Int {
     case yearlyDataUsage
+    case emptyData
 }
 
 class MobileDataUsageSection: AnimatableSectionModelType, IdentifiableType {

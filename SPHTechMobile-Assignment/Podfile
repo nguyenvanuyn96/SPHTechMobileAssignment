@@ -13,7 +13,6 @@ target 'SPHTechMobile-Assignment' do
   pod 'RealmSwift'
   pod 'RxRealm'
   pod 'Reusable'
-  pod "ESPullToRefresh"
 
   target 'SPHTechMobile-AssignmentTests' do
     inherit! :search_paths

@@ -10,7 +10,6 @@ import Foundation
 import RxSwift
 import SnapKit
 import Reusable
-import ESPullToRefresh
 import RxDataSources
 
 @objcMembers
@@ -58,7 +57,18 @@ class MobileDataUsageViewController: UIViewController, MobileDataUsageViewProtoc
     
     private var _dataSource: RxTableViewSectionedAnimatedDataSource<MobileDataUsageSection>?
 
+    private var _isLoadingMore: Bool = true
     private let _disposeBag: DisposeBag = DisposeBag()
+    private lazy var _loadMoreIndicatorView: UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
+        view.startAnimating()
+        view.color = UIColor.lightGray
+        view.isHidden = false
+        view.frame = CGRect(x: 0, y: 0, width: self._tableView.frame.width, height: 48)
+        
+        return view
+    }()
+    
     private lazy var _pullRefreshControl: UIRefreshControl = {
         let view = UIRefreshControl()
         view.attributedTitle = NSAttributedString(string: "Pull to refresh")
@@ -79,10 +89,6 @@ class MobileDataUsageViewController: UIViewController, MobileDataUsageViewProtoc
         view.showsVerticalScrollIndicator = true
         view.showsHorizontalScrollIndicator = false
         view.estimatedRowHeight = 1
-        view.es.addInfiniteScrolling { [unowned self] in
-            self._loadMoreSub.onNext(())
-        }
-        view.es.resetNoMoreData()
         view.register(cellType: MobileDataUsageYearlyDataTableViewCell.self)
         view.register(cellType: MobileDataUsageEmptyTableViewCell.self)
 
@@ -110,7 +116,6 @@ class MobileDataUsageViewController: UIViewController, MobileDataUsageViewProtoc
         self.setupObservePresenter()
         
         self._viewDidLoadSub.onNext(())
-        
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -169,7 +174,7 @@ class MobileDataUsageViewController: UIViewController, MobileDataUsageViewProtoc
                 if data.contains(where: { (section) -> Bool in
                     return section.index == MobileDataUsageSectionIndex.emptyData.rawValue
                 }) {
-                    self?._tableView.es.removeRefreshFooter()
+                    self?.setLoadMoreIndicator(isShow: false)
                 }
                 return data
             })
@@ -189,26 +194,33 @@ class MobileDataUsageViewController: UIViewController, MobileDataUsageViewProtoc
                 
                 self.endLoadData()
                 if isEnded {
-                    self._tableView.es.noticeNoMoreData()
-                } else {
-                    self._tableView.es.resetNoMoreData()
+                    self.setLoadMoreIndicator(isShow: false)
                 }
             })
             .disposed(by: self._disposeBag)
     }
     
     private func endLoadData() {
+        self._isLoadingMore = false
         self._tableView.refreshControl?.endRefreshing()
-        self._tableView.es.stopLoadingMore()
+    }
+    
+    private func setLoadMoreIndicator(isShow: Bool) {
+        if isShow {
+            self._loadMoreIndicatorView.isHidden = false
+            self._loadMoreIndicatorView.startAnimating()
+            self._tableView.tableFooterView = self._loadMoreIndicatorView
+        } else {
+            self._isLoadingMore = false
+            self._loadMoreIndicatorView.isHidden = true
+            self._loadMoreIndicatorView.stopAnimating()
+            self._loadMoreIndicatorView.removeFromSuperview()
+            self._tableView.tableFooterView = nil
+        }
     }
 
     @objc func didPullRefreshData() {
-        self._tableView.es.removeRefreshFooter()
-        self._tableView.es.resetNoMoreData()
-        self._tableView.es.stopLoadingMore()
-        self._tableView.es.addInfiniteScrolling { [unowned self] in
-            self._loadMoreSub.onNext(())
-        }
+        self.setLoadMoreIndicator(isShow: true)
         self._pullToRefreshSub.onNext(())
     }
     
@@ -218,6 +230,19 @@ class MobileDataUsageViewController: UIViewController, MobileDataUsageViewProtoc
 }
 
 extension MobileDataUsageViewController: UITableViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let isNeedLoad: Bool = offsetY > contentHeight - scrollView.frame.size.height
+        if isNeedLoad,
+            !self._isLoadingMore,
+            self._tableView.tableFooterView != nil {
+            
+            self._isLoadingMore = true
+            self._loadMoreSub.onNext(())
+        }
+    }
+    
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return CGFloat.leastNormalMagnitude
     }
@@ -280,6 +305,7 @@ extension MobileDataUsageViewController {
         self.view.backgroundColor = UIColor.black
         self._tableView.refreshControl = self._pullRefreshControl
         self.view.addSubview(self._tableView)
+        self.setLoadMoreIndicator(isShow: true)
     }
 
     fileprivate func setupLayout() {

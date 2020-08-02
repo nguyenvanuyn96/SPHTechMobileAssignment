@@ -11,7 +11,7 @@ import Foundation
 struct Link: Codable {
     let start: String?
     let next: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case start = "start"
         case next = "next"

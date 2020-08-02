@@ -23,8 +23,9 @@ protocol MobileDataUsageViewToPresenterProtocol: class {
     
     var pullToRefreshObs: Observable<Void> { get }
     var loadMoreObs: Observable<Void> { get }
-
+    
     var tapViewYearDataItemObs: Observable<MobileYearlyDataUsageModel> { get }
+    var tapViewChartObs: Observable<MobileYearlyDataUsageModel> { get }
 }
 
 protocol MobileDataUsagePresenterToViewProtocol {

@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let window = self.window else { return }
         
-        let beginViewController: UIViewController = ViewController()
+        let beginViewController: UIViewController = MobileDataUsageWireframe.createMobileDataUsageViewController()
         
         window.rootViewController = UINavigationController(rootViewController: beginViewController)
         window.makeKeyAndVisible()

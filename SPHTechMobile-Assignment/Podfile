@@ -10,8 +10,10 @@ target 'SPHTechMobile-Assignment' do
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
   pod 'RxDataSources'
-  pod 'RealmSwift' 
+  pod 'RealmSwift'
+  pod 'RxRealm'
   pod 'Reusable'
+  pod "ESPullToRefresh"
 
   target 'SPHTechMobile-AssignmentTests' do
     inherit! :search_paths

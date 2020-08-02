@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F0CD692D-9214-407E-A89C-3F85B270B7D8"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E39DE54B-5739-41D5-8841-DE3275279E09"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SPHTechMobile-Assignment/MobileDataUsage/View/MobileDataUsageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "setupObservePresenter()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "17BEF4BC-F2A6-4034-9576-0B7A57930E78"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SPHTechMobile-Assignment/MobileDataUsage/Presenter/MobileDataUsagePresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "dataSourceDrv"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B103F060-37EB-4EB0-B1CF-17B1F9F30D41"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SPHTechMobile-Assignment/MobileDataUsage/Presenter/MobileDataUsagePresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "dataSourceDrv"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "69F49301-1358-47DA-9B61-A917F6F96620"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SPHTechMobile-Assignment/MobileDataUsage/Presenter/MobileDataUsagePresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "transformingRecords(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "712ED3F3-F6D1-4941-AF54-02D0769E8968"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SPHTechMobile-Assignment/MobileDataUsage/Presenter/MobileDataUsagePresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
+            landmarkName = "transformingRecords(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "92C9D822-AB83-44FF-B0DF-8B1E92E92DF8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SPHTechMobile-Assignment/MobileDataUsage/Presenter/MobileDataUsagePresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "dataSourceDrv"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "92C9D822-AB83-44FF-B0DF-8B1E92E92DF8 - 1dc8592617355ba4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;SPHTechMobile_Assignment.Record&gt;&gt;) -&gt; Swift.Array&lt;SPHTechMobile_Assignment.MobileDataUsageSection&gt; in closure #1 () -&gt; RxCocoa.SharedSequence&lt;RxCocoa.DriverSharingStrategy, Swift.Array&lt;SPHTechMobile_Assignment.MobileDataUsageSection&gt;&gt; in SPHTechMobile_Assignment.MobileDataUsagePresenter.dataSourceDrv.getter : RxCocoa.SharedSequence&lt;RxCocoa.DriverSharingStrategy, Swift.Array&lt;SPHTechMobile_Assignment.MobileDataUsageSection&gt;&gt;"
+                  moduleName = "SPHTechMobile-Assignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lap00519/Desktop/Workspace/Projects/SPHTechMobileAssignment.git/SPHTechMobile-Assignment/SPHTechMobile-Assignment/MobileDataUsage/Presenter/MobileDataUsagePresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "1131">
+               </Location>
+               <Location
+                  uuid = "92C9D822-AB83-44FF-B0DF-8B1E92E92DF8 - dc3a30a3f4303647"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (SPHTechMobile_Assignment.MobileYearlyDataUsageModel) -&gt; SPHTechMobile_Assignment.MobileDataUsageSectionItem in closure #1 (Swift.Optional&lt;Swift.Array&lt;SPHTechMobile_Assignment.Record&gt;&gt;) -&gt; Swift.Array&lt;SPHTechMobile_Assignment.MobileDataUsageSection&gt; in closure #1 () -&gt; RxCocoa.SharedSequence&lt;RxCocoa.DriverSharingStrategy, Swift.Array&lt;SPHTechMobile_Assignment.MobileDataUsageSection&gt;&gt; in SPHTechMobile_Assignment.MobileDataUsagePresenter.dataSourceDrv.getter : RxCocoa.SharedSequence&lt;RxCocoa.DriverSharingStrategy, Swift.Array&lt;SPHTechMobile_Assignment.MobileDataUsageSection&gt;&gt;"
+                  moduleName = "SPHTechMobile-Assignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lap00519/Desktop/Workspace/Projects/SPHTechMobileAssignment.git/SPHTechMobile-Assignment/SPHTechMobile-Assignment/MobileDataUsage/Presenter/MobileDataUsagePresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0BEED012-1439-4D9E-8AF4-91A586057711"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SPHTechMobile-Assignment/MobileDataUsage/Presenter/MobileDataUsagePresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "dataSourceDrv"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6874A606-06A3-4ACC-AA97-DCC8211C32C2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SPHTechMobile-Assignment/MobileDataUsage/Presenter/MobileDataUsagePresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "dataSourceDrv"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SwiftErrorBreakpoint">
+         <BreakpointContent
+            uuid = "2A24134E-EDC2-4B65-A42E-BFBDA7219302"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "28D82C84-3D10-405B-A55E-4BA260780345"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "1"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.RuntimeIssueBreakpoint">
+         <BreakpointContent
+            uuid = "6F189FEE-0916-460F-8E7B-FCAFC829D490"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            type = "65535">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.IDEConstraintErrorBreakpoint">
+         <BreakpointContent
+            uuid = "6E1663C8-5606-4127-BF7D-214686CFEBFC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.IDETestFailureBreakpoint">
+         <BreakpointContent
+            uuid = "AA30FBF4-1060-4CE1-8A61-D8B27D398892"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

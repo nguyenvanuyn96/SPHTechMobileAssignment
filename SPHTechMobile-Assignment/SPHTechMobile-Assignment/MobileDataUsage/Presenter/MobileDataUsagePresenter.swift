@@ -52,7 +52,7 @@ class MobileDataUsagePresenter: MobileDataUsagePresenterProtocol {
                 return MobileDataUsageSectionItem.yearlyDataUsage(item: item)
             })
             yearlySectionItems.append(contentsOf: newYearlySectionItems)
-            
+            yearlySection.items = yearlySectionItems
             return self._currentDataSource
         })
         .asDriver(onErrorJustReturn: [])
@@ -68,17 +68,17 @@ class MobileDataUsagePresenter: MobileDataUsagePresenterProtocol {
     }()
     
     lazy var endInfiniteScrollDrv: Driver<Bool> = {
-        let suggestionDataSub = self._mobileDataUsageSub.map({ (data) -> Bool in
+        let dataSub = self._mobileDataUsageSub.map({ (data) -> Bool in
             guard let strongData = data else { return false }
             
             return strongData.isEmpty
         })
         
         guard let interactor = self.interactor else {
-            return suggestionDataSub.asDriver(onErrorJustReturn: false)
+            return dataSub.asDriver(onErrorJustReturn: false)
         }
         
-        return Observable.merge(suggestionDataSub,
+        return Observable.merge(dataSub,
                                 interactor.endOfDataDrv.asObservable())
             .asDriver(onErrorJustReturn: false)
     }()
@@ -108,6 +108,13 @@ class MobileDataUsagePresenter: MobileDataUsagePresenterProtocol {
                 
                 wireframe.navigateToMobileDataYearUsageDetailPage(data: model)
             }).disposed(by: self._disposeBag)
+        view.tapViewChartObs
+            .throttle(RxTimeInterval.milliseconds(300), scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] (model) in
+                guard let self = self, let wireframe = self.wireframe else { return }
+                
+                wireframe.navigateToMobileDataYearUsageDetailPage(data: model)
+            }).disposed(by: self._disposeBag)
         
         Observable.merge(view.viewDidLoadObs, view.pullToRefreshObs)
             .throttle(RxTimeInterval.milliseconds(1000), scheduler: MainScheduler.instance)
@@ -117,9 +124,9 @@ class MobileDataUsagePresenter: MobileDataUsagePresenterProtocol {
                 self._currentDataSource.removeAll()
                 self._mobileDataUsageSub.onNext([])
                 
-                guard let strongInteractor = self.interactor else { return }
+                guard let interactor = self.interactor else { return }
                 
-                strongInteractor.loadData()
+                interactor.loadData()
                     .subscribe(onNext: { [weak self] (records) in
                         guard let self = self else { return }
                         
@@ -142,9 +149,9 @@ class MobileDataUsagePresenter: MobileDataUsagePresenterProtocol {
         view.loadMoreObs
             .throttle(RxTimeInterval.milliseconds(300), scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] in
-                guard let self = self, let strongInteractor = self.interactor else { return }
+                guard let self = self, let interactor = self.interactor else { return }
                 
-                strongInteractor.loadMoreData()
+                interactor.loadMoreData()
                     .subscribe(onNext: { [weak self] (records) in
                         guard let self = self else { return }
   

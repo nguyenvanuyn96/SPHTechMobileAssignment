@@ -20,6 +20,32 @@
 		9947E79924D1E5C800646F04 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E79824D1E5C800646F04 /* Record.swift */; };
 		9947E79B24D1E65A00646F04 /* MobileDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E79A24D1E65A00646F04 /* MobileDataResult.swift */; };
 		9947E79D24D1E82100646F04 /* MobileDataUsageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E79C24D1E82100646F04 /* MobileDataUsageResponse.swift */; };
+		9947E7A724D1EA9000646F04 /* MobileDataUsageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7A624D1EA9000646F04 /* MobileDataUsageProtocol.swift */; };
+		9947E7AA24D1EAF600646F04 /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7A924D1EAF600646F04 /* BaseViewProtocol.swift */; };
+		9947E7AC24D1EB0200646F04 /* BasePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7AB24D1EB0200646F04 /* BasePresenterProtocol.swift */; };
+		9947E7AE24D1EB1400646F04 /* BaseInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7AD24D1EB1400646F04 /* BaseInteractorProtocol.swift */; };
+		9947E7B024D1EB2400646F04 /* BaseWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7AF24D1EB2400646F04 /* BaseWireframeProtocol.swift */; };
+		9947E7B224D1ED7200646F04 /* MobileYearlyDataUsageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7B124D1ED7200646F04 /* MobileYearlyDataUsageModel.swift */; };
+		9947E7B424D1EEC200646F04 /* MobileDataUsageSectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7B324D1EEC200646F04 /* MobileDataUsageSectionItem.swift */; };
+		9947E7B624D1EFCA00646F04 /* MobileDataUsageSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7B524D1EFCA00646F04 /* MobileDataUsageSection.swift */; };
+		9947E7B824D46B8300646F04 /* MobileDataUsagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7B724D46B8300646F04 /* MobileDataUsagePresenter.swift */; };
+		9947E7BA24D489AF00646F04 /* MobileDataUsageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7B924D489AF00646F04 /* MobileDataUsageViewController.swift */; };
+		9947E7BD24D578A300646F04 /* Collection+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7BC24D578A300646F04 /* Collection+Subscript.swift */; };
+		9947E7BF24D5901100646F04 /* MobileDataUsageEmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7BE24D5901100646F04 /* MobileDataUsageEmptyTableViewCell.swift */; };
+		9947E7C124D590F400646F04 /* MobileDataUsageYearlyDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7C024D590F400646F04 /* MobileDataUsageYearlyDataTableViewCell.swift */; };
+		9947E7C424D59F2700646F04 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7C324D59F2700646F04 /* LineChart.swift */; };
+		9947E7C624D59FBA00646F04 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7C524D59FBA00646F04 /* String+Extensions.swift */; };
+		9947E7C824D59FCC00646F04 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7C724D59FCC00646F04 /* CGPoint+Extensions.swift */; };
+		9947E7CA24D5A7D200646F04 /* MobileDataUsageWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7C924D5A7D200646F04 /* MobileDataUsageWireframe.swift */; };
+		9947E7CC24D5A90700646F04 /* MobileDataUsageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7CB24D5A90700646F04 /* MobileDataUsageInteractor.swift */; };
+		9947E7D024D5B8F300646F04 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7CF24D5B8F200646F04 /* NetworkServiceProtocol.swift */; };
+		9947E7D624D5D2A400646F04 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7D524D5D2A400646F04 /* NetworkConfig.swift */; };
+		9947E7D824D5D85300646F04 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7D724D5D85300646F04 /* NetworkService.swift */; };
+		9947E7DB24D5DF5200646F04 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7DA24D5DF5200646F04 /* ApiService.swift */; };
+		9947E7DE24D5F65A00646F04 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7DD24D5F65A00646F04 /* AppConfig.swift */; };
+		9947E7E424D5FC1200646F04 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7E324D5FC1200646F04 /* DatabaseService.swift */; };
+		9947E7E624D6069E00646F04 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7E524D6069E00646F04 /* Reachability.swift */; };
+		9947E7E824D6712F00646F04 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7E724D6712F00646F04 /* UIButton+Extensions.swift */; };
 		9BA80F485255DE82CC960863 /* Pods_SPHTechMobile_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0939AC49C02698053132B6 /* Pods_SPHTechMobile_Assignment.framework */; };
 		E9EFFC9A6D99BD2FA97C09E7 /* Pods_SPHTechMobile_AssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78ABA2F051D2E45DB268D2A /* Pods_SPHTechMobile_AssignmentTests.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +90,32 @@
 		9947E79824D1E5C800646F04 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		9947E79A24D1E65A00646F04 /* MobileDataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataResult.swift; sourceTree = "<group>"; };
 		9947E79C24D1E82100646F04 /* MobileDataUsageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageResponse.swift; sourceTree = "<group>"; };
+		9947E7A624D1EA9000646F04 /* MobileDataUsageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageProtocol.swift; sourceTree = "<group>"; };
+		9947E7A924D1EAF600646F04 /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
+		9947E7AB24D1EB0200646F04 /* BasePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenterProtocol.swift; sourceTree = "<group>"; };
+		9947E7AD24D1EB1400646F04 /* BaseInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractorProtocol.swift; sourceTree = "<group>"; };
+		9947E7AF24D1EB2400646F04 /* BaseWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframeProtocol.swift; sourceTree = "<group>"; };
+		9947E7B124D1ED7200646F04 /* MobileYearlyDataUsageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileYearlyDataUsageModel.swift; sourceTree = "<group>"; };
+		9947E7B324D1EEC200646F04 /* MobileDataUsageSectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageSectionItem.swift; sourceTree = "<group>"; };
+		9947E7B524D1EFCA00646F04 /* MobileDataUsageSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageSection.swift; sourceTree = "<group>"; };
+		9947E7B724D46B8300646F04 /* MobileDataUsagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsagePresenter.swift; sourceTree = "<group>"; };
+		9947E7B924D489AF00646F04 /* MobileDataUsageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageViewController.swift; sourceTree = "<group>"; };
+		9947E7BC24D578A300646F04 /* Collection+Subscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Subscript.swift"; sourceTree = "<group>"; };
+		9947E7BE24D5901100646F04 /* MobileDataUsageEmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageEmptyTableViewCell.swift; sourceTree = "<group>"; };
+		9947E7C024D590F400646F04 /* MobileDataUsageYearlyDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageYearlyDataTableViewCell.swift; sourceTree = "<group>"; };
+		9947E7C324D59F2700646F04 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		9947E7C524D59FBA00646F04 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		9947E7C724D59FCC00646F04 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		9947E7C924D5A7D200646F04 /* MobileDataUsageWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageWireframe.swift; sourceTree = "<group>"; };
+		9947E7CB24D5A90700646F04 /* MobileDataUsageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageInteractor.swift; sourceTree = "<group>"; };
+		9947E7CF24D5B8F200646F04 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		9947E7D524D5D2A400646F04 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		9947E7D724D5D85300646F04 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		9947E7DA24D5DF5200646F04 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		9947E7DD24D5F65A00646F04 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		9947E7E324D5FC1200646F04 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		9947E7E524D6069E00646F04 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		9947E7E724D6712F00646F04 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		9E97E83184C56859A239D8BD /* Pods-SPHTechMobile-AssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPHTechMobile-AssignmentTests.release.xcconfig"; path = "Target Support Files/Pods-SPHTechMobile-AssignmentTests/Pods-SPHTechMobile-AssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
 		A78ABA2F051D2E45DB268D2A /* Pods_SPHTechMobile_AssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SPHTechMobile_AssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF31FCA72C0CAB1A94370337 /* Pods-SPHTechMobile-Assignment-SPHTechMobile-AssignmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPHTechMobile-Assignment-SPHTechMobile-AssignmentUITests.debug.xcconfig"; path = "Target Support Files/Pods-SPHTechMobile-Assignment-SPHTechMobile-AssignmentUITests/Pods-SPHTechMobile-Assignment-SPHTechMobile-AssignmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,10 +186,11 @@
 		9947E76224D1CC4F00646F04 /* SPHTechMobile-Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				9947E7DF24D5FAC000646F04 /* MobileDataUsage */,
+				9947E7A024D1E9ED00646F04 /* Ultilities */,
 				9947E79324D1E4C600646F04 /* Model */,
 				9947E76324D1CC4F00646F04 /* AppDelegate.swift */,
 				9947E76524D1CC4F00646F04 /* SceneDelegate.swift */,
-				9947E76724D1CC4F00646F04 /* ViewController.swift */,
 				9947E76C24D1CC5200646F04 /* Assets.xcassets */,
 				9947E76E24D1CC5200646F04 /* LaunchScreen.storyboard */,
 				9947E77124D1CC5200646F04 /* Info.plist */,
@@ -173,6 +226,143 @@
 				9947E79C24D1E82100646F04 /* MobileDataUsageResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9947E79F24D1E9D500646F04 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9947E7CF24D5B8F200646F04 /* NetworkServiceProtocol.swift */,
+				9947E7D724D5D85300646F04 /* NetworkService.swift */,
+				9947E7D524D5D2A400646F04 /* NetworkConfig.swift */,
+				9947E7E524D6069E00646F04 /* Reachability.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		9947E7A024D1E9ED00646F04 /* Ultilities */ = {
+			isa = PBXGroup;
+			children = (
+				9947E7E224D5FBFC00646F04 /* Database */,
+				9947E7DC24D5F64D00646F04 /* AppConfig */,
+				9947E7D924D5DF4300646F04 /* APIService */,
+				9947E7C224D59F1600646F04 /* CustomView */,
+				9947E7BB24D5786B00646F04 /* Extensions */,
+				9947E7A824D1EADD00646F04 /* BaseVIPERArchitect */,
+				9947E79F24D1E9D500646F04 /* Networking */,
+			);
+			path = Ultilities;
+			sourceTree = "<group>";
+		};
+		9947E7A124D1E9F400646F04 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9947E7B124D1ED7200646F04 /* MobileYearlyDataUsageModel.swift */,
+				9947E7B324D1EEC200646F04 /* MobileDataUsageSectionItem.swift */,
+				9947E7B524D1EFCA00646F04 /* MobileDataUsageSection.swift */,
+				9947E7B724D46B8300646F04 /* MobileDataUsagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9947E7A224D1E9FC00646F04 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9947E7CB24D5A90700646F04 /* MobileDataUsageInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9947E7A324D1EA0500646F04 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				9947E7C924D5A7D200646F04 /* MobileDataUsageWireframe.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		9947E7A424D1EA2B00646F04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9947E76724D1CC4F00646F04 /* ViewController.swift */,
+				9947E7B924D489AF00646F04 /* MobileDataUsageViewController.swift */,
+				9947E7BE24D5901100646F04 /* MobileDataUsageEmptyTableViewCell.swift */,
+				9947E7C024D590F400646F04 /* MobileDataUsageYearlyDataTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9947E7A524D1EA3C00646F04 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				9947E7A624D1EA9000646F04 /* MobileDataUsageProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		9947E7A824D1EADD00646F04 /* BaseVIPERArchitect */ = {
+			isa = PBXGroup;
+			children = (
+				9947E7A924D1EAF600646F04 /* BaseViewProtocol.swift */,
+				9947E7AB24D1EB0200646F04 /* BasePresenterProtocol.swift */,
+				9947E7AD24D1EB1400646F04 /* BaseInteractorProtocol.swift */,
+				9947E7AF24D1EB2400646F04 /* BaseWireframeProtocol.swift */,
+			);
+			path = BaseVIPERArchitect;
+			sourceTree = "<group>";
+		};
+		9947E7BB24D5786B00646F04 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9947E7BC24D578A300646F04 /* Collection+Subscript.swift */,
+				9947E7C524D59FBA00646F04 /* String+Extensions.swift */,
+				9947E7C724D59FCC00646F04 /* CGPoint+Extensions.swift */,
+				9947E7E724D6712F00646F04 /* UIButton+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9947E7C224D59F1600646F04 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				9947E7C324D59F2700646F04 /* LineChart.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		9947E7D924D5DF4300646F04 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				9947E7DA24D5DF5200646F04 /* ApiService.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		9947E7DC24D5F64D00646F04 /* AppConfig */ = {
+			isa = PBXGroup;
+			children = (
+				9947E7DD24D5F65A00646F04 /* AppConfig.swift */,
+			);
+			path = AppConfig;
+			sourceTree = "<group>";
+		};
+		9947E7DF24D5FAC000646F04 /* MobileDataUsage */ = {
+			isa = PBXGroup;
+			children = (
+				9947E7A524D1EA3C00646F04 /* Protocol */,
+				9947E7A424D1EA2B00646F04 /* View */,
+				9947E7A324D1EA0500646F04 /* Wireframe */,
+				9947E7A224D1E9FC00646F04 /* Interactor */,
+				9947E7A124D1E9F400646F04 /* Presenter */,
+			);
+			path = MobileDataUsage;
+			sourceTree = "<group>";
+		};
+		9947E7E224D5FBFC00646F04 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				9947E7E324D5FC1200646F04 /* DatabaseService.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		9F48C1DB9B5628B5A41DEEB6 /* Pods */ = {
@@ -426,13 +616,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9947E7BD24D578A300646F04 /* Collection+Subscript.swift in Sources */,
 				9947E76824D1CC4F00646F04 /* ViewController.swift in Sources */,
+				9947E7B424D1EEC200646F04 /* MobileDataUsageSectionItem.swift in Sources */,
+				9947E7BA24D489AF00646F04 /* MobileDataUsageViewController.swift in Sources */,
+				9947E7CC24D5A90700646F04 /* MobileDataUsageInteractor.swift in Sources */,
+				9947E7D024D5B8F300646F04 /* NetworkServiceProtocol.swift in Sources */,
+				9947E7D624D5D2A400646F04 /* NetworkConfig.swift in Sources */,
+				9947E7C424D59F2700646F04 /* LineChart.swift in Sources */,
+				9947E7CA24D5A7D200646F04 /* MobileDataUsageWireframe.swift in Sources */,
+				9947E7D824D5D85300646F04 /* NetworkService.swift in Sources */,
 				9947E76424D1CC4F00646F04 /* AppDelegate.swift in Sources */,
+				9947E7E824D6712F00646F04 /* UIButton+Extensions.swift in Sources */,
+				9947E7B624D1EFCA00646F04 /* MobileDataUsageSection.swift in Sources */,
+				9947E7B024D1EB2400646F04 /* BaseWireframeProtocol.swift in Sources */,
+				9947E7C124D590F400646F04 /* MobileDataUsageYearlyDataTableViewCell.swift in Sources */,
 				9947E79B24D1E65A00646F04 /* MobileDataResult.swift in Sources */,
+				9947E7AA24D1EAF600646F04 /* BaseViewProtocol.swift in Sources */,
 				9947E79924D1E5C800646F04 /* Record.swift in Sources */,
+				9947E7C624D59FBA00646F04 /* String+Extensions.swift in Sources */,
+				9947E7DE24D5F65A00646F04 /* AppConfig.swift in Sources */,
 				9947E79524D1E4DC00646F04 /* Field.swift in Sources */,
+				9947E7E424D5FC1200646F04 /* DatabaseService.swift in Sources */,
+				9947E7C824D59FCC00646F04 /* CGPoint+Extensions.swift in Sources */,
+				9947E7BF24D5901100646F04 /* MobileDataUsageEmptyTableViewCell.swift in Sources */,
 				9947E76624D1CC4F00646F04 /* SceneDelegate.swift in Sources */,
+				9947E7AE24D1EB1400646F04 /* BaseInteractorProtocol.swift in Sources */,
+				9947E7A724D1EA9000646F04 /* MobileDataUsageProtocol.swift in Sources */,
+				9947E7AC24D1EB0200646F04 /* BasePresenterProtocol.swift in Sources */,
+				9947E7DB24D5DF5200646F04 /* ApiService.swift in Sources */,
 				9947E79D24D1E82100646F04 /* MobileDataUsageResponse.swift in Sources */,
+				9947E7E624D6069E00646F04 /* Reachability.swift in Sources */,
+				9947E7B224D1ED7200646F04 /* MobileYearlyDataUsageModel.swift in Sources */,
+				9947E7B824D46B8300646F04 /* MobileDataUsagePresenter.swift in Sources */,
 				9947E79724D1E57900646F04 /* Link.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

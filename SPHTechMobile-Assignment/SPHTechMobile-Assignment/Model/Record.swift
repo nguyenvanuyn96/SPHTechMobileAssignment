@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Record: Codable {
+class Record: Object, Codable {
     let volumeOfMobileData: String?
     let quarter: String?
     let id: Int?
@@ -41,10 +42,8 @@ class Record: Codable {
         return self.quarter?.components(separatedBy: "-")
     }()
     
-    init(volumeOfMobileData: String?, quarter: String?, id: Int?) {
-        self.volumeOfMobileData = volumeOfMobileData
-        self.quarter = quarter
-        self.id = id
+    override static func ignoredProperties() -> [String] {
+        return ["volume", "quarterYear", "quarterNumber", "quarterComponents"]
     }
     
     enum CodingKeys: String, CodingKey {

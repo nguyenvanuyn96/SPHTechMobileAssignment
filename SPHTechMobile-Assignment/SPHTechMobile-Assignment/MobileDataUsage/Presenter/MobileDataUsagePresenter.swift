@@ -18,7 +18,17 @@ class MobileDataUsagePresenter: MobileDataUsagePresenterProtocol {
             guard let self = self else { return [] }
             
             // If the newRecords is empty or nil, just return the currentDataSource
-            guard var newRecords = records, !newRecords.isEmpty else { return self._currentDataSource }
+            guard var newRecords = records, !newRecords.isEmpty else {
+                if self._currentDataSource.isEmpty {
+                    self._currentDataSource.append(MobileDataUsageSection(items: [MobileDataUsageSectionItem.empty(description: "Data not found!")], index: MobileDataUsageSectionIndex.emptyData.rawValue))
+                }
+                
+                return self._currentDataSource
+            }
+            
+            self._currentDataSource = self._currentDataSource.filter({ (section) -> Bool in
+                return section.index != MobileDataUsageSectionIndex.emptyData.rawValue
+            })
             
             // Find the existed yearlySection, if NOT then just create an yearlySection and append the sectionItems data into
             guard var yearlySection = self._currentDataSource.first(where: { (section) -> Bool in
@@ -100,20 +110,20 @@ class MobileDataUsagePresenter: MobileDataUsagePresenterProtocol {
     
     private func setupObserveView() {
         guard let view = self.view else { return }
-        
-        view.tapViewYearDataItemObs
-            .throttle(RxTimeInterval.milliseconds(300), scheduler: MainScheduler.instance)
-            .subscribe(onNext: { [weak self] (model) in
-                guard let self = self, let wireframe = self.wireframe else { return }
-                
-                wireframe.navigateToMobileDataYearUsageDetailPage(data: model)
-            }).disposed(by: self._disposeBag)
+
+//        view.tapViewYearDataItemObs
+//            .throttle(RxTimeInterval.milliseconds(300), scheduler: MainScheduler.instance)
+//            .subscribe(onNext: { [weak self] (model) in
+//                guard let self = self, let wireframe = self.wireframe, let view = self.view else { return }
+//                
+//                wireframe.navigateToMobileDataYearUsageDetailPage(data: model, from: view)
+//            }).disposed(by: self._disposeBag)
         view.tapViewChartObs
             .throttle(RxTimeInterval.milliseconds(300), scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] (model) in
-                guard let self = self, let wireframe = self.wireframe else { return }
+                guard let self = self, let wireframe = self.wireframe, let view = self.view else { return }
                 
-                wireframe.navigateToMobileDataYearUsageDetailPage(data: model)
+                wireframe.navigateToMobileDataYearUsageDetailPage(data: model, from: view)
             }).disposed(by: self._disposeBag)
         
         Observable.merge(view.viewDidLoadObs, view.pullToRefreshObs)
@@ -122,7 +132,6 @@ class MobileDataUsagePresenter: MobileDataUsagePresenterProtocol {
                 guard let self = self else { return }
                 
                 self._currentDataSource.removeAll()
-                self._mobileDataUsageSub.onNext([])
                 
                 guard let interactor = self.interactor else { return }
                 

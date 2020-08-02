@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class MobileDataUsageWireframe: MobileDataUsageWireframeProtocol {
     class func createMobileDataUsageViewController() -> MobileDataUsageViewProtocol {
@@ -26,7 +27,21 @@ class MobileDataUsageWireframe: MobileDataUsageWireframeProtocol {
         return view
     }
     
-    func navigateToMobileDataYearUsageDetailPage(data: MobileYearlyDataUsageModel) {
-        //todo
+    func navigateToMobileDataYearUsageDetailPage(data: MobileYearlyDataUsageModel, from viewController: UIViewController) {
+        var message: String = ""
+        if data.isDecrease {
+            message.append("Descrease quarter data in \(data.year):\n")
+            let descreaseRecords = data.decreaseRecords.map({ (record) -> String in
+                return "\(record.quarterYear!)-Q\(record.quarterNumber!)   \(record.volume)"
+            })
+            message.append(descreaseRecords.joined(separator: "\n"))
+        } else {
+            message.append("All quarter data in \(data.year):\n")
+            let records = data.records.map({ (record) -> String in
+                return "\(record.quarterYear!)-Q\(record.quarterNumber!)   \(record.volume)"
+            })
+            message.append(records.joined(separator: "\n"))
+        }
+        viewController.showAlert(title: "Mobile Data Usage", message: message, preferredStyle: .alert, completion: nil)
     }
 }

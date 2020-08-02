@@ -10,11 +10,11 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-protocol MobileDataUsageViewProtocol: BaseViewProtocol, MobileDataUsageViewToPresenterProtocol where Self: UIViewController {
+protocol MobileDataUsageViewProtocol: BaseViewProtocol, MobileDataUsageViewToPresenterProtocol {
     var presenter: (BasePresenterProtocol & MobileDataUsagePresenterToViewProtocol) { get }
 }
 
-protocol MobileDataUsageViewToPresenterProtocol: class {
+protocol MobileDataUsageViewToPresenterProtocol where Self: UIViewController {
     var viewWillAppearObs: Observable<Void> { get }
     var viewDidAppearObs: Observable<Void> { get }
     var viewWillDisappearObs: Observable<Void> { get }
@@ -52,6 +52,6 @@ protocol MobileDataUsageInteractorProtocol: BaseInteractorProtocol {
 protocol MobileDataUsageWireframeProtocol: BaseWireframeProtocol {
     static func createMobileDataUsageViewController() -> MobileDataUsageViewProtocol
     
-    func navigateToMobileDataYearUsageDetailPage(data: MobileYearlyDataUsageModel)
+    func navigateToMobileDataYearUsageDetailPage(data: MobileYearlyDataUsageModel, from viewController: UIViewController)
 }
 

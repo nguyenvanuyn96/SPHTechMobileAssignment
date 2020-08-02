@@ -43,7 +43,7 @@ class MobileDataUsageEmptyTableViewCell: UITableViewCell, Reusable {
     }
     
     fileprivate func setupViews() {
-        self.contentView.backgroundColor = UIColor.systemBackground
+        self.contentView.backgroundColor = UIColor.black
         
         self.contentView.addSubview(_emptyIconImageView)
         self.contentView.addSubview(_descriptionLabel)    }

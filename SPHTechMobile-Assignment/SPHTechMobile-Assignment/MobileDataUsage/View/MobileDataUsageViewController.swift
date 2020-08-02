@@ -59,25 +59,26 @@ class MobileDataUsageViewController: UIViewController, MobileDataUsageViewProtoc
     private var _dataSource: RxTableViewSectionedAnimatedDataSource<MobileDataUsageSection>?
 
     private let _disposeBag: DisposeBag = DisposeBag()
+    private lazy var _pullRefreshControl: UIRefreshControl = {
+        let view = UIRefreshControl()
+        view.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        view.backgroundColor = UIColor.white
+        view.tintColor = UIColor.gray
+        view.addTarget(self, action: #selector(didPullRefreshData), for: .valueChanged)
+        
+        return view
+    }()
 
     private lazy var _tableView: UITableView = {
         let view = UITableView(frame: CGRect.zero, style: UITableView.Style.grouped)
-        view.backgroundColor = UIColor.systemBackground
+        view.backgroundColor = UIColor.black
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
+        view.separatorStyle = UITableViewCell.SeparatorStyle.none
         view.alwaysBounceVertical = true
         view.delegate = self
         view.showsVerticalScrollIndicator = true
         view.showsHorizontalScrollIndicator = false
         view.estimatedRowHeight = 1
-        let animator: ESRefreshHeaderAnimator = ESRefreshHeaderAnimator(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 40))
-        animator.executeIncremental = 70
-        animator.trigger = 164
-        view.es.addPullToRefresh(animator: animator, handler: { [unowned self] in
-            view.es.resetNoMoreData()
-            view.es.stopLoadingMore()
-            self._pullToRefreshSub.onNext(())
-        })
         view.es.addInfiniteScrolling { [unowned self] in
             self._loadMoreSub.onNext(())
         }
@@ -88,10 +89,6 @@ class MobileDataUsageViewController: UIViewController, MobileDataUsageViewProtoc
         return view
     }()
     
-    override var prefersStatusBarHidden: Bool {
-        return false
-    }
-
     init(presenter: (BasePresenterProtocol & MobileDataUsagePresenterToViewProtocol)) {
         self.presenter = presenter
         
@@ -111,8 +108,9 @@ class MobileDataUsageViewController: UIViewController, MobileDataUsageViewProtoc
         self.skinTableView()
         self.bindTableView()
         self.setupObservePresenter()
-
+        
         self._viewDidLoadSub.onNext(())
+        
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -168,7 +166,11 @@ class MobileDataUsageViewController: UIViewController, MobileDataUsageViewProtoc
         
         self.presenter.dataSourceDrv
             .map({ [weak self] (data) -> [MobileDataUsageSection] in
-                self?.endLoadData()
+                if data.contains(where: { (section) -> Bool in
+                    return section.index == MobileDataUsageSectionIndex.emptyData.rawValue
+                }) {
+                    self?._tableView.es.removeRefreshFooter()
+                }
                 return data
             })
             .drive(self._tableView.rx.items(dataSource: dataSource))
@@ -196,8 +198,18 @@ class MobileDataUsageViewController: UIViewController, MobileDataUsageViewProtoc
     }
     
     private func endLoadData() {
-        self._tableView.es.stopPullToRefresh()
+        self._tableView.refreshControl?.endRefreshing()
         self._tableView.es.stopLoadingMore()
+    }
+
+    @objc func didPullRefreshData() {
+        self._tableView.es.removeRefreshFooter()
+        self._tableView.es.resetNoMoreData()
+        self._tableView.es.stopLoadingMore()
+        self._tableView.es.addInfiniteScrolling { [unowned self] in
+            self._loadMoreSub.onNext(())
+        }
+        self._pullToRefreshSub.onNext(())
     }
     
     func bindTableView() {
@@ -265,6 +277,8 @@ extension MobileDataUsageViewController: UITableViewDelegate {
 extension MobileDataUsageViewController {
     fileprivate func setupViews() {
         self.title = "Mobile Data Usage"
+        self.view.backgroundColor = UIColor.black
+        self._tableView.refreshControl = self._pullRefreshControl
         self.view.addSubview(self._tableView)
     }
 

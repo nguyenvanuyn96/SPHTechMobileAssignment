@@ -17,7 +17,7 @@ class MobileDataUsageYearlyDataTableViewCell: UITableViewCell, Reusable {
     
     private lazy var _containerView: UIView = {
         let view = UIView()
-//        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.black
         view.layer.cornerRadius = 12
         view.layer.borderColor = UIColor.gray.cgColor
         view.layer.borderWidth = 1
@@ -67,7 +67,7 @@ class MobileDataUsageYearlyDataTableViewCell: UITableViewCell, Reusable {
         view.numberOfLines = 1
         view.lineBreakMode = .byTruncatingTail
         view.font = UIFont.systemFont(ofSize: 40, weight: .semibold)
-//        view.textColor = UIColor.white
+        view.textColor = UIColor.white
         view.setContentCompressionResistancePriority(UILayoutPriority.required, for: NSLayoutConstraint.Axis.horizontal)
         view.setContentHuggingPriority(UILayoutPriority.required, for: NSLayoutConstraint.Axis.horizontal)
         
@@ -119,7 +119,7 @@ class MobileDataUsageYearlyDataTableViewCell: UITableViewCell, Reusable {
     }
     
     fileprivate func setupViews() {
-        self.contentView.backgroundColor = UIColor.systemBackground
+        self.contentView.backgroundColor = UIColor.black
         
         self.contentView.addSubview(self._containerView)
         self._containerView.addSubview(self._yearLabel)
@@ -153,9 +153,9 @@ class MobileDataUsageYearlyDataTableViewCell: UITableViewCell, Reusable {
         }
         
         self._chartButton.snp.makeConstraints { (make) in
-            make.top.equalTo(self._yearLabel)
+            make.top.equalTo(self._yearLabel).offset(-4)
             make.trailing.equalToSuperview().offset(-16)
-            make.height.width.equalTo(20)
+            make.height.width.equalTo(28)
             make.leading.greaterThanOrEqualTo(self._upDownStatusImageView.snp.trailing).offset(12)
         }
         

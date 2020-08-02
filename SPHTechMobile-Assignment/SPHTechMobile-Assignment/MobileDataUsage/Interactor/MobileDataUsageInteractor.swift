@@ -12,7 +12,7 @@ import RxCocoa
 
 class MobileDataUsageInteractor: MobileDataUsageInteractorProtocol {
     private var _currentPage: Int = -1
-    private let _limit: Int = 100
+    private let _limit: Int = 16
     private let _endOfDataSub: PublishSubject<Bool> = PublishSubject<Bool>()
     private let _apiService: MobileDataUsageApiProtocol
     private let _databaseService: MobileDataUsageDatabaseServiceProtocol

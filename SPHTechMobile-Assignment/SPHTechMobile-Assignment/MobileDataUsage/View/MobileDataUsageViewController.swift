@@ -69,6 +69,7 @@ class MobileDataUsageViewController: UIViewController, MobileDataUsageViewProtoc
         view.delegate = self
         view.showsVerticalScrollIndicator = true
         view.showsHorizontalScrollIndicator = false
+        view.estimatedRowHeight = 1
         let animator: ESRefreshHeaderAnimator = ESRefreshHeaderAnimator(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 40))
         animator.executeIncremental = 70
         animator.trigger = 164
@@ -159,7 +160,7 @@ class MobileDataUsageViewController: UIViewController, MobileDataUsageViewProtoc
         })
         self._dataSource?.animationConfiguration = AnimationConfiguration(insertAnimation: .top,
                                                                           reloadAnimation: .fade,
-                                                                          deleteAnimation: .top)
+                                                                          deleteAnimation: .fade)
     }
     
     private func setupObservePresenter() {
@@ -188,9 +189,7 @@ class MobileDataUsageViewController: UIViewController, MobileDataUsageViewProtoc
                 if isEnded {
                     self._tableView.es.noticeNoMoreData()
                 } else {
-                    self._tableView.es.addInfiniteScrolling { [unowned self] in
-                        self._loadMoreSub.onNext(())
-                    }
+                    self._tableView.es.resetNoMoreData()
                 }
             })
             .disposed(by: self._disposeBag)
@@ -231,35 +230,35 @@ extension MobileDataUsageViewController: UITableViewDelegate {
         self._tapViewYearDataItemSub.onNext(model)
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        guard let sectionItem = self._dataSource?.sectionModels[indexPath.section].items[indexPath.row] else { return UITableView.automaticDimension }
-//
-//        guard case let MobileDataUsageSectionItem.yearlyDataUsage(item: model) = sectionItem else { return UITableView.automaticDimension }
-//
-//        guard let cachedCellHeight = model.cellHeight else { return UITableView.automaticDimension }
-//
-//        return cachedCellHeight
-//    }
-//
-//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        guard let sectionItem = self._dataSource?.sectionModels[indexPath.section].items[indexPath.row] else { return }
-//
-//        guard case let MobileDataUsageSectionItem.yearlyDataUsage(item: model) = sectionItem else { return }
-//
-//        guard model.cellHeight == nil else { return }
-//
-//        model.cellHeight = cell.frame.size.height
-//    }
-//
-//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        guard let sectionItem = self._dataSource?.sectionModels[indexPath.section].items[indexPath.row] else { return UITableView.automaticDimension }
-//
-//        guard case let MobileDataUsageSectionItem.yearlyDataUsage(item: model) = sectionItem else { return UITableView.automaticDimension }
-//
-//        guard let cachedCellHeight = model.cellHeight else { return UITableView.automaticDimension }
-//
-//        return cachedCellHeight
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        guard let sectionItem = self._dataSource?.sectionModels[indexPath.section].items[indexPath.row] else { return UITableView.automaticDimension }
+
+        guard case let MobileDataUsageSectionItem.yearlyDataUsage(item: model) = sectionItem else { return UITableView.automaticDimension }
+
+        guard let cachedCellHeight = model.cellHeight else { return UITableView.automaticDimension }
+
+        return cachedCellHeight
+    }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let sectionItem = self._dataSource?.sectionModels[indexPath.section].items[indexPath.row] else { return }
+
+        guard case let MobileDataUsageSectionItem.yearlyDataUsage(item: model) = sectionItem else { return }
+
+        guard model.cellHeight == nil else { return }
+
+        model.cellHeight = cell.frame.size.height
+    }
+
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        guard let sectionItem = self._dataSource?.sectionModels[indexPath.section].items[indexPath.row] else { return UITableView.automaticDimension }
+
+        guard case let MobileDataUsageSectionItem.yearlyDataUsage(item: model) = sectionItem else { return UITableView.automaticDimension }
+
+        guard let cachedCellHeight = model.cellHeight else { return UITableView.automaticDimension }
+
+        return cachedCellHeight
+    }
 }
 
 //MARK: - Setup views & layout

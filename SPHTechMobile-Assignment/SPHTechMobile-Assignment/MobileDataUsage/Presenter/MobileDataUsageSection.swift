@@ -25,9 +25,9 @@ class MobileDataUsageSection: AnimatableSectionModelType, IdentifiableType {
     var identity: String {
         let titleHash: Int = (title ?? "").hashValue
         let firstItemIdentity: String = items.first?.identity ?? ""
-        let lastItemIdentity: String = items.last?.identity ?? ""
-        let sectionItemsCount: Int = items.count
-        return "MobileDataUsageSection_\(titleHash)_\(firstItemIdentity)_\(lastItemIdentity)_\(index)_\(sectionItemsCount)-SectionItems"
+        let identity: String = "MobileDataUsageSection_\(titleHash)_\(firstItemIdentity)_\(index)"
+        
+        return identity
     }
     
     init(items: [Item],

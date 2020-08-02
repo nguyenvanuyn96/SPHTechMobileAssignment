@@ -18,14 +18,25 @@ enum MobileDataUsageSectionItem: IdentifiableType, Equatable {
     public var identity: String {
         switch self {
         case .yearlyDataUsage(let item):
-            let identify: String = "MobileDataUsageSectionItem_YearlyDataUsage_\(item.year)_\(item.totalAmount)_\(item.records.count)_\(item.isDecrease)_\(Date().timeIntervalSince1970)"
+            let identify: String = "MobileDataUsageSectionItem_YearlyDataUsage_\(item.year)"
             return identify
         case .empty(let description):
-            return "MobileDataUsageSectionItem_YearlyDataUsage_\(description.hashValue)"
+            return "MobileDataUsageSectionItem_EmptyData_\(description.hashValue)"
         }
     }
     
     public static func == (lhs: MobileDataUsageSectionItem, rhs: MobileDataUsageSectionItem) -> Bool {
-        return lhs.identity == rhs.identity
+        guard lhs.identity == rhs.identity else { return false }
+        
+        switch (lhs, rhs) {
+        case (.yearlyDataUsage(let lhsItem), .yearlyDataUsage(let rhsItem)):
+            return lhsItem.totalAmount == rhsItem.totalAmount
+                && lhsItem.records.count == rhsItem.records.count
+                && lhsItem.year == rhsItem.year
+        case (.empty(let lhsDescription), .empty(let rhsDescription)):
+            return lhsDescription == rhsDescription
+        default:
+            return false
+        }
     }
 }

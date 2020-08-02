@@ -80,6 +80,7 @@ class MobileDataUsageViewController: UIViewController, MobileDataUsageViewProtoc
         view.es.addInfiniteScrolling { [unowned self] in
             self._loadMoreSub.onNext(())
         }
+        view.es.resetNoMoreData()
         view.register(cellType: MobileDataUsageYearlyDataTableViewCell.self)
         view.register(cellType: MobileDataUsageEmptyTableViewCell.self)
 

@@ -15,9 +15,10 @@ class MobileDataUsageWireframe: MobileDataUsageWireframeProtocol {
         
         let apiService: MobileDataUsageApiProtocol = ApiService()
         let databaseService: MobileDataUsageDatabaseServiceProtocol = DatabaseService()
+        let reachability: ReachabilityProtocol? = try? Reachability()
         
         let view = MobileDataUsageViewController(presenter: presenter)
-        let interactor = MobileDataUsageInteractor(apiService: apiService, databaseService: databaseService)
+        let interactor = MobileDataUsageInteractor(apiService: apiService, databaseService: databaseService, reachability: reachability)
         let wireframe = MobileDataUsageWireframe()
         
         presenter.view = view

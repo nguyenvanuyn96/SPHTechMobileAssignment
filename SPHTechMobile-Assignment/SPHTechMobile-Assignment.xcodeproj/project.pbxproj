@@ -47,6 +47,9 @@
 		9947E7E624D6069E00646F04 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7E524D6069E00646F04 /* Reachability.swift */; };
 		9947E7E824D6712F00646F04 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7E724D6712F00646F04 /* UIButton+Extensions.swift */; };
 		9947E7EC24D6A05200646F04 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7EB24D6A05200646F04 /* UIViewController+Alert.swift */; };
+		99A01ECA24D716660048E1CB /* RecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A01EC924D716660048E1CB /* RecordTests.swift */; };
+		99A01ECC24D71F3D0048E1CB /* MobileDataUsageInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A01ECB24D71F3D0048E1CB /* MobileDataUsageInteractorTests.swift */; };
+		99A01ECE24D73EBC0048E1CB /* Reachability+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A01ECD24D73EBC0048E1CB /* Reachability+Extensions.swift */; };
 		9BA80F485255DE82CC960863 /* Pods_SPHTechMobile_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0939AC49C02698053132B6 /* Pods_SPHTechMobile_Assignment.framework */; };
 		E9EFFC9A6D99BD2FA97C09E7 /* Pods_SPHTechMobile_AssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78ABA2F051D2E45DB268D2A /* Pods_SPHTechMobile_AssignmentTests.framework */; };
 /* End PBXBuildFile section */
@@ -118,6 +121,9 @@
 		9947E7E524D6069E00646F04 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		9947E7E724D6712F00646F04 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		9947E7EB24D6A05200646F04 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		99A01EC924D716660048E1CB /* RecordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTests.swift; sourceTree = "<group>"; };
+		99A01ECB24D71F3D0048E1CB /* MobileDataUsageInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageInteractorTests.swift; sourceTree = "<group>"; };
+		99A01ECD24D73EBC0048E1CB /* Reachability+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reachability+Extensions.swift"; sourceTree = "<group>"; };
 		9E97E83184C56859A239D8BD /* Pods-SPHTechMobile-AssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPHTechMobile-AssignmentTests.release.xcconfig"; path = "Target Support Files/Pods-SPHTechMobile-AssignmentTests/Pods-SPHTechMobile-AssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
 		A78ABA2F051D2E45DB268D2A /* Pods_SPHTechMobile_AssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SPHTechMobile_AssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF31FCA72C0CAB1A94370337 /* Pods-SPHTechMobile-Assignment-SPHTechMobile-AssignmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPHTechMobile-Assignment-SPHTechMobile-AssignmentUITests.debug.xcconfig"; path = "Target Support Files/Pods-SPHTechMobile-Assignment-SPHTechMobile-AssignmentUITests/Pods-SPHTechMobile-Assignment-SPHTechMobile-AssignmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -203,7 +209,10 @@
 		9947E77924D1CC5200646F04 /* SPHTechMobile-AssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
+				99A01EC624D716000048E1CB /* Model */,
+				99A01EC524D715F60048E1CB /* Ultilities */,
 				9947E77A24D1CC5200646F04 /* SPHTechMobile_AssignmentTests.swift */,
+				99A01EC424D715E60048E1CB /* MobileDataUsage */,
 				9947E77C24D1CC5200646F04 /* Info.plist */,
 			);
 			path = "SPHTechMobile-AssignmentTests";
@@ -320,6 +329,7 @@
 				9947E7C724D59FCC00646F04 /* CGPoint+Extensions.swift */,
 				9947E7E724D6712F00646F04 /* UIButton+Extensions.swift */,
 				9947E7EB24D6A05200646F04 /* UIViewController+Alert.swift */,
+				99A01ECD24D73EBC0048E1CB /* Reachability+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -366,6 +376,29 @@
 				9947E7E324D5FC1200646F04 /* DatabaseService.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		99A01EC424D715E60048E1CB /* MobileDataUsage */ = {
+			isa = PBXGroup;
+			children = (
+				99A01ECB24D71F3D0048E1CB /* MobileDataUsageInteractorTests.swift */,
+			);
+			path = MobileDataUsage;
+			sourceTree = "<group>";
+		};
+		99A01EC524D715F60048E1CB /* Ultilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ultilities;
+			sourceTree = "<group>";
+		};
+		99A01EC624D716000048E1CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				99A01EC924D716660048E1CB /* RecordTests.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9F48C1DB9B5628B5A41DEEB6 /* Pods */ = {
@@ -619,6 +652,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99A01ECE24D73EBC0048E1CB /* Reachability+Extensions.swift in Sources */,
 				9947E7BD24D578A300646F04 /* Collection+Subscript.swift in Sources */,
 				9947E76824D1CC4F00646F04 /* ViewController.swift in Sources */,
 				9947E7B424D1EEC200646F04 /* MobileDataUsageSectionItem.swift in Sources */,
@@ -661,7 +695,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99A01ECA24D716660048E1CB /* RecordTests.swift in Sources */,
 				9947E77B24D1CC5200646F04 /* SPHTechMobile_AssignmentTests.swift in Sources */,
+				99A01ECC24D71F3D0048E1CB /* MobileDataUsageInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

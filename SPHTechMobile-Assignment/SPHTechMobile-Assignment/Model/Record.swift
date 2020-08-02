@@ -21,7 +21,7 @@ class Record: Object, Codable {
     }()
     
     private(set) lazy var quarterYear: Int? = {
-        guard let quarterComponents = self.quarterComponents else { return nil }
+        guard let quarterComponents = self.quarterComponents, quarterComponents.count == 2 else { return nil }
         
         guard let quarterYearStr = quarterComponents.first else { return nil }
         
@@ -29,7 +29,7 @@ class Record: Object, Codable {
     }()
     
     private(set) lazy var quarterNumber: Int? = {
-        guard let quarterComponents = self.quarterComponents else { return nil }
+        guard let quarterComponents = self.quarterComponents, quarterComponents.count == 2 else { return nil }
         
         guard var quarterNumberStr = quarterComponents.last else { return nil }
         

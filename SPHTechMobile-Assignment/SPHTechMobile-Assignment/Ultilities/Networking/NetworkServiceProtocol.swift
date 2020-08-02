@@ -9,6 +9,10 @@
 import Foundation
 import RxSwift
 
+public protocol ReachabilityProtocol {
+    var isNetworkAvailable: Bool { get }
+}
+
 public enum NetworkServiceError: Error {
     case errorStatusCode(statusCode: Int)
     case cancelled

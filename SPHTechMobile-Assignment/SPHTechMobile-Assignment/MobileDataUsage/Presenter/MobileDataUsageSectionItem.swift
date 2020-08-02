@@ -18,7 +18,7 @@ enum MobileDataUsageSectionItem: IdentifiableType, Equatable {
     public var identity: String {
         switch self {
         case .yearlyDataUsage(let item):
-            let identify: String = "MobileDataUsageSectionItem_YearlyDataUsage_\(item.year)_\(item.totalAmount)_\(item.records.count)_\(item.isDecrease)"
+            let identify: String = "MobileDataUsageSectionItem_YearlyDataUsage_\(item.year)_\(item.totalAmount)_\(item.records.count)_\(item.isDecrease)_\(Date().timeIntervalSince1970)"
             return identify
         case .empty(let description):
             return "MobileDataUsageSectionItem_YearlyDataUsage_\(description.hashValue)"

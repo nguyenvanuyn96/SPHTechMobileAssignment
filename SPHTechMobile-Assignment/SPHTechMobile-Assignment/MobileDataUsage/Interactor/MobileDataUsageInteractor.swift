@@ -16,7 +16,6 @@ class MobileDataUsageInteractor: MobileDataUsageInteractorProtocol {
     private let _endOfDataSub: PublishSubject<Bool> = PublishSubject<Bool>()
     private let _apiService: MobileDataUsageApiProtocol
     private let _databaseService: MobileDataUsageDatabaseServiceProtocol
-    private let _reachability: Reachability? = try? Reachability()
     
     init(apiService: MobileDataUsageApiProtocol, databaseService: MobileDataUsageDatabaseServiceProtocol) {
         self._apiService = apiService
@@ -37,7 +36,7 @@ class MobileDataUsageInteractor: MobileDataUsageInteractorProtocol {
     }
     
     private func loadData(page: Int, limit: Int) -> Observable<[Record]?> {
-        let status = self._reachability?.connection
+        let status = try? Reachability().connection
         if (status == Reachability.Connection.unavailable) {
             return Observable<[Record]?>.create { [weak self] obs in
                 guard let self = self else {
@@ -50,6 +49,7 @@ class MobileDataUsageInteractor: MobileDataUsageInteractorProtocol {
                 
                 obs.onNext(records)
                 obs.onCompleted()
+                self._endOfDataSub.onNext(true)
                 return Disposables.create()
             }
         } else {
@@ -62,6 +62,7 @@ class MobileDataUsageInteractor: MobileDataUsageInteractorProtocol {
                     self._currentPage += 1
                     if let responseRecords = strongResponse.result?.records,
                         responseRecords.count > 0 {
+                        self._databaseService.saveMobileDataUsage(records: responseRecords)
                         self._endOfDataSub.onNext(false)
                     } else {
                         self._endOfDataSub.onNext(true)

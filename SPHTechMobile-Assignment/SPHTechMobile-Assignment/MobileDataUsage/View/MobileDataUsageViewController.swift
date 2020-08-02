@@ -67,7 +67,7 @@ class MobileDataUsageViewController: UIViewController, MobileDataUsageViewProtoc
         view.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
         view.alwaysBounceVertical = true
         view.delegate = self
-        view.showsVerticalScrollIndicator = false
+        view.showsVerticalScrollIndicator = true
         view.showsHorizontalScrollIndicator = false
         let animator: ESRefreshHeaderAnimator = ESRefreshHeaderAnimator(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 40))
         animator.executeIncremental = 70
@@ -176,6 +176,7 @@ class MobileDataUsageViewController: UIViewController, MobileDataUsageViewProtoc
         self.presenter.showErrorDrv
             .drive(onNext: { [weak self] (error) in
                 self?.endLoadData()
+                self?.showAlert(message: error.localizedDescription)
             })
             .disposed(by: self._disposeBag)
         
@@ -183,6 +184,7 @@ class MobileDataUsageViewController: UIViewController, MobileDataUsageViewProtoc
             .drive(onNext: { [weak self] (isEnded) in
                 guard let self = self else { return }
                 
+                self.endLoadData()
                 if isEnded {
                     self._tableView.es.noticeNoMoreData()
                 } else {

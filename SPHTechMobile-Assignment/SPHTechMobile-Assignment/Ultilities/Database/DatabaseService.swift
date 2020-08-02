@@ -13,6 +13,7 @@ import RxRealm
 
 protocol MobileDataUsageDatabaseServiceProtocol {
     func getMobileDataUsage() -> [Record]
+    func saveMobileDataUsage(records: [Record])
 }
 
 class DatabaseService {
@@ -204,6 +205,10 @@ public extension Realm {
 extension DatabaseService: MobileDataUsageDatabaseServiceProtocol {
     func getMobileDataUsage() -> [Record] {
         return self.read(Record.self)
+    }
+    
+    func saveMobileDataUsage(records: [Record]) {
+        self.create(objects: records, updatePolicy: .all)
     }
 }
 

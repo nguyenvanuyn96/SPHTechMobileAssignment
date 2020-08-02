@@ -10,9 +10,9 @@ import Foundation
 import RealmSwift
 
 class Record: Object, Codable {
-    let volumeOfMobileData: String?
-    let quarter: String?
-    let id: Int?
+    @objc dynamic var volumeOfMobileData: String?
+    @objc dynamic var quarter: String?
+    @objc dynamic var id: Int = 0
     
     private(set) lazy var volume: Double = {
         guard let volume = self.volumeOfMobileData else { return 0 }
@@ -41,6 +41,10 @@ class Record: Object, Codable {
     private lazy var quarterComponents: [String]? = {
         return self.quarter?.components(separatedBy: "-")
     }()
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
     
     override static func ignoredProperties() -> [String] {
         return ["volume", "quarterYear", "quarterNumber", "quarterComponents"]

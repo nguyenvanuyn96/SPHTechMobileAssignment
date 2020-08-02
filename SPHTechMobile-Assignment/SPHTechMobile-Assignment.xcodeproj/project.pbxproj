@@ -46,6 +46,7 @@
 		9947E7E424D5FC1200646F04 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7E324D5FC1200646F04 /* DatabaseService.swift */; };
 		9947E7E624D6069E00646F04 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7E524D6069E00646F04 /* Reachability.swift */; };
 		9947E7E824D6712F00646F04 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7E724D6712F00646F04 /* UIButton+Extensions.swift */; };
+		9947E7EC24D6A05200646F04 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7EB24D6A05200646F04 /* UIViewController+Alert.swift */; };
 		9BA80F485255DE82CC960863 /* Pods_SPHTechMobile_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0939AC49C02698053132B6 /* Pods_SPHTechMobile_Assignment.framework */; };
 		E9EFFC9A6D99BD2FA97C09E7 /* Pods_SPHTechMobile_AssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78ABA2F051D2E45DB268D2A /* Pods_SPHTechMobile_AssignmentTests.framework */; };
 /* End PBXBuildFile section */
@@ -116,6 +117,7 @@
 		9947E7E324D5FC1200646F04 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		9947E7E524D6069E00646F04 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		9947E7E724D6712F00646F04 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		9947E7EB24D6A05200646F04 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		9E97E83184C56859A239D8BD /* Pods-SPHTechMobile-AssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPHTechMobile-AssignmentTests.release.xcconfig"; path = "Target Support Files/Pods-SPHTechMobile-AssignmentTests/Pods-SPHTechMobile-AssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
 		A78ABA2F051D2E45DB268D2A /* Pods_SPHTechMobile_AssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SPHTechMobile_AssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF31FCA72C0CAB1A94370337 /* Pods-SPHTechMobile-Assignment-SPHTechMobile-AssignmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPHTechMobile-Assignment-SPHTechMobile-AssignmentUITests.debug.xcconfig"; path = "Target Support Files/Pods-SPHTechMobile-Assignment-SPHTechMobile-AssignmentUITests/Pods-SPHTechMobile-Assignment-SPHTechMobile-AssignmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 				9947E7C524D59FBA00646F04 /* String+Extensions.swift */,
 				9947E7C724D59FCC00646F04 /* CGPoint+Extensions.swift */,
 				9947E7E724D6712F00646F04 /* UIButton+Extensions.swift */,
+				9947E7EB24D6A05200646F04 /* UIViewController+Alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				9947E79924D1E5C800646F04 /* Record.swift in Sources */,
 				9947E7C624D59FBA00646F04 /* String+Extensions.swift in Sources */,
 				9947E7DE24D5F65A00646F04 /* AppConfig.swift in Sources */,
+				9947E7EC24D6A05200646F04 /* UIViewController+Alert.swift in Sources */,
 				9947E79524D1E4DC00646F04 /* Field.swift in Sources */,
 				9947E7E424D5FC1200646F04 /* DatabaseService.swift in Sources */,
 				9947E7C824D59FCC00646F04 /* CGPoint+Extensions.swift in Sources */,

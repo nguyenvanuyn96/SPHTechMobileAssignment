@@ -272,8 +272,7 @@ class MobileDataUsageYearlyDataTableViewCell: UITableViewCell, Reusable {
         downStatusImageView.snp.makeConstraints { (make) in
             make.height.width.equalTo(14)
             make.leading.equalToSuperview().offset(32)
-            make.top.equalToSuperview()
-            make.bottom.equalToSuperview()
+            make.centerY.equalToSuperview()
         }
         
         titleLabel.snp.makeConstraints { (make) in

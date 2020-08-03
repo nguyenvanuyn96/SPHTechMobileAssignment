@@ -15,9 +15,7 @@ This is the project that I did in the test examination when interviewing at Wond
 * Reusable: For easily register and dequeueForReusableCell
 
 ## ScreenShoot:
-<img src="https://github.com/nguyenvanuyn96/SPHTechMobileAssignment/blob/master/screenshot_main.png" width="375">  <img src="https://github.com/nguyenvanuyn96/SPHTechMobileAssignment/blob/master/screenshot_pulltorefresh.png" width="375"> <img src="https://github.com/nguyenvanuyn96/SPHTechMobileAssignment/blob/master/screenshot_loadmore.png" width="375"> 
-
-<img src="https://github.com/nguyenvanuyn96/SPHTechMobileAssignment/blob/master/screenshot_viewdetail_all.png" width="375"> <img src="https://github.com/nguyenvanuyn96/SPHTechMobileAssignment/blob/master/screenshot_viewdetail_down.png" width="375"> 
+<img src="https://github.com/nguyenvanuyn96/SPHTechMobileAssignment/blob/master/screenshot_main.png" width="326">  <img src="https://github.com/nguyenvanuyn96/SPHTechMobileAssignment/blob/master/screenshot_pulltorefresh.png" width="326"> <img src="https://github.com/nguyenvanuyn96/SPHTechMobileAssignment/blob/master/screenshot_loadmore.png" width="326"> <img src="https://github.com/nguyenvanuyn96/SPHTechMobileAssignment/blob/master/screenshot_viewdetail_all.png" width="326"> <img src="https://github.com/nguyenvanuyn96/SPHTechMobileAssignment/blob/master/screenshot_viewdetail_down.png" width="326"> 
 
 ## Author:
 * Name: Uy Nguyen

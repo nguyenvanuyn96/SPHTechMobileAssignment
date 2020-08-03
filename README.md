@@ -12,7 +12,6 @@ Then run
 ```
 $ sudo gem install cocoapods
 $ pod install --repo-update
-
 ```
 Open SPHTechMobile-Assignment.xcworkspace in Xcode and build...
 

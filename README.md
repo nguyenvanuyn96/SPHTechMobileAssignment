@@ -15,7 +15,12 @@ This is the project that I did in the test examination when interviewing at Wond
 * Reusable: For easily register and dequeueForReusableCell
 
 ## ScreenShoot:
-![alt text][main]![alt text][pull_to_refresh]![alt text][load_more][alt text][viewdetail_all][alt text][viewdetail_descrease]
+![alt text][main]
+![alt text][pull_to_refresh]
+![alt text][load_more]
+![alt text][viewdetail_all]
+![alt text][viewdetail_descrease]
+
 [main]: https://github.com/nguyenvanuyn96/SPHTechMobileAssignment/blob/master/screenshot_main.png "Main page"
 [pull_to_refresh]: https://github.com/nguyenvanuyn96/SPHTechMobileAssignment/blob/master/screenshot_pulltorefresh.png "Pull to fresh"
 [load_more]: https://github.com/nguyenvanuyn96/SPHTechMobileAssignment/blob/master/screenshot_loadmore.png "Load more"

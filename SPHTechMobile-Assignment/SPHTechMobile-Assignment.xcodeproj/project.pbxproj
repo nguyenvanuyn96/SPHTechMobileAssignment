@@ -13,7 +13,6 @@
 		9947E76824D1CC4F00646F04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E76724D1CC4F00646F04 /* ViewController.swift */; };
 		9947E76D24D1CC5200646F04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9947E76C24D1CC5200646F04 /* Assets.xcassets */; };
 		9947E77024D1CC5200646F04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9947E76E24D1CC5200646F04 /* LaunchScreen.storyboard */; };
-		9947E77B24D1CC5200646F04 /* SPHTechMobile_AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E77A24D1CC5200646F04 /* SPHTechMobile_AssignmentTests.swift */; };
 		9947E78624D1CC5200646F04 /* SPHTechMobile_AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E78524D1CC5200646F04 /* SPHTechMobile_AssignmentUITests.swift */; };
 		9947E79524D1E4DC00646F04 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E79424D1E4DC00646F04 /* Field.swift */; };
 		9947E79724D1E57900646F04 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E79624D1E57900646F04 /* Link.swift */; };
@@ -50,6 +49,8 @@
 		99A01ECA24D716660048E1CB /* RecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A01EC924D716660048E1CB /* RecordTests.swift */; };
 		99A01ECC24D71F3D0048E1CB /* MobileDataUsageInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A01ECB24D71F3D0048E1CB /* MobileDataUsageInteractorTests.swift */; };
 		99A01ECE24D73EBC0048E1CB /* Reachability+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A01ECD24D73EBC0048E1CB /* Reachability+Extensions.swift */; };
+		99A01ED024D744FC0048E1CB /* MobileYearlyDataUsageModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A01ECF24D744FC0048E1CB /* MobileYearlyDataUsageModelTests.swift */; };
+		99A01ED224D7490D0048E1CB /* MobileDataUsageViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A01ED124D7490D0048E1CB /* MobileDataUsageViewControllerTests.swift */; };
 		9BA80F485255DE82CC960863 /* Pods_SPHTechMobile_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0939AC49C02698053132B6 /* Pods_SPHTechMobile_Assignment.framework */; };
 		E9EFFC9A6D99BD2FA97C09E7 /* Pods_SPHTechMobile_AssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78ABA2F051D2E45DB268D2A /* Pods_SPHTechMobile_AssignmentTests.framework */; };
 /* End PBXBuildFile section */
@@ -84,7 +85,6 @@
 		9947E76F24D1CC5200646F04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9947E77124D1CC5200646F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9947E77624D1CC5200646F04 /* SPHTechMobile-AssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SPHTechMobile-AssignmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9947E77A24D1CC5200646F04 /* SPHTechMobile_AssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPHTechMobile_AssignmentTests.swift; sourceTree = "<group>"; };
 		9947E77C24D1CC5200646F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9947E78124D1CC5200646F04 /* SPHTechMobile-AssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SPHTechMobile-AssignmentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9947E78524D1CC5200646F04 /* SPHTechMobile_AssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPHTechMobile_AssignmentUITests.swift; sourceTree = "<group>"; };
@@ -124,6 +124,8 @@
 		99A01EC924D716660048E1CB /* RecordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTests.swift; sourceTree = "<group>"; };
 		99A01ECB24D71F3D0048E1CB /* MobileDataUsageInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageInteractorTests.swift; sourceTree = "<group>"; };
 		99A01ECD24D73EBC0048E1CB /* Reachability+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reachability+Extensions.swift"; sourceTree = "<group>"; };
+		99A01ECF24D744FC0048E1CB /* MobileYearlyDataUsageModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileYearlyDataUsageModelTests.swift; sourceTree = "<group>"; };
+		99A01ED124D7490D0048E1CB /* MobileDataUsageViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageViewControllerTests.swift; sourceTree = "<group>"; };
 		9E97E83184C56859A239D8BD /* Pods-SPHTechMobile-AssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPHTechMobile-AssignmentTests.release.xcconfig"; path = "Target Support Files/Pods-SPHTechMobile-AssignmentTests/Pods-SPHTechMobile-AssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
 		A78ABA2F051D2E45DB268D2A /* Pods_SPHTechMobile_AssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SPHTechMobile_AssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF31FCA72C0CAB1A94370337 /* Pods-SPHTechMobile-Assignment-SPHTechMobile-AssignmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPHTechMobile-Assignment-SPHTechMobile-AssignmentUITests.debug.xcconfig"; path = "Target Support Files/Pods-SPHTechMobile-Assignment-SPHTechMobile-AssignmentUITests/Pods-SPHTechMobile-Assignment-SPHTechMobile-AssignmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -211,7 +213,6 @@
 			children = (
 				99A01EC624D716000048E1CB /* Model */,
 				99A01EC524D715F60048E1CB /* Ultilities */,
-				9947E77A24D1CC5200646F04 /* SPHTechMobile_AssignmentTests.swift */,
 				99A01EC424D715E60048E1CB /* MobileDataUsage */,
 				9947E77C24D1CC5200646F04 /* Info.plist */,
 			);
@@ -382,6 +383,8 @@
 			isa = PBXGroup;
 			children = (
 				99A01ECB24D71F3D0048E1CB /* MobileDataUsageInteractorTests.swift */,
+				99A01ECF24D744FC0048E1CB /* MobileYearlyDataUsageModelTests.swift */,
+				99A01ED124D7490D0048E1CB /* MobileDataUsageViewControllerTests.swift */,
 			);
 			path = MobileDataUsage;
 			sourceTree = "<group>";
@@ -696,7 +699,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				99A01ECA24D716660048E1CB /* RecordTests.swift in Sources */,
-				9947E77B24D1CC5200646F04 /* SPHTechMobile_AssignmentTests.swift in Sources */,
+				99A01ED024D744FC0048E1CB /* MobileYearlyDataUsageModelTests.swift in Sources */,
+				99A01ED224D7490D0048E1CB /* MobileDataUsageViewControllerTests.swift in Sources */,
 				99A01ECC24D71F3D0048E1CB /* MobileDataUsageInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

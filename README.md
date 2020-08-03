@@ -7,7 +7,7 @@ This is the project that I did in the test examination when interviewing at Wond
 * Xcode Version 11.3 with Swift 5.0
 
 ## Building
-Open Terminar, and cd to folder which contains the Podfile of this project. 
+Open Terminal, and `cd` to folder which contains the Podfile of this project. 
 Then run
 ```
 $ sudo gem install cocoapods

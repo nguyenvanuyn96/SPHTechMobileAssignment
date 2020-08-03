@@ -31,7 +31,6 @@
 		9947E7BD24D578A300646F04 /* Collection+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7BC24D578A300646F04 /* Collection+Subscript.swift */; };
 		9947E7BF24D5901100646F04 /* MobileDataUsageEmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7BE24D5901100646F04 /* MobileDataUsageEmptyTableViewCell.swift */; };
 		9947E7C124D590F400646F04 /* MobileDataUsageYearlyDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7C024D590F400646F04 /* MobileDataUsageYearlyDataTableViewCell.swift */; };
-		9947E7C424D59F2700646F04 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7C324D59F2700646F04 /* LineChart.swift */; };
 		9947E7C624D59FBA00646F04 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7C524D59FBA00646F04 /* String+Extensions.swift */; };
 		9947E7C824D59FCC00646F04 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7C724D59FCC00646F04 /* CGPoint+Extensions.swift */; };
 		9947E7CA24D5A7D200646F04 /* MobileDataUsageWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947E7C924D5A7D200646F04 /* MobileDataUsageWireframe.swift */; };
@@ -51,6 +50,12 @@
 		99A01ED024D744FC0048E1CB /* MobileYearlyDataUsageModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A01ECF24D744FC0048E1CB /* MobileYearlyDataUsageModelTests.swift */; };
 		99A01ED224D7490D0048E1CB /* MobileDataUsageViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A01ED124D7490D0048E1CB /* MobileDataUsageViewControllerTests.swift */; };
 		99A01ED424D7D06A0048E1CB /* MobileDataUsageDatabaseServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A01ED324D7D06A0048E1CB /* MobileDataUsageDatabaseServiceTests.swift */; };
+		99A01ED624D80AC60048E1CB /* ApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A01ED524D80AC60048E1CB /* ApiServiceTests.swift */; };
+		99A01ED824D81BE00048E1CB /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A01ED724D81BE00048E1CB /* EndpointTests.swift */; };
+		99A01EDA24D81DC90048E1CB /* NetworkConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A01ED924D81DC90048E1CB /* NetworkConfigTests.swift */; };
+		99A01EE024D828960048E1CB /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A01EDF24D828950048E1CB /* NetworkServiceTests.swift */; };
+		99A01EE224D839D00048E1CB /* MobileDataUsageSectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A01EE124D839D00048E1CB /* MobileDataUsageSectionTests.swift */; };
+		99A01EE424D83BC80048E1CB /* CGPointExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A01EE324D83BC80048E1CB /* CGPointExtensionTests.swift */; };
 		9BA80F485255DE82CC960863 /* Pods_SPHTechMobile_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0939AC49C02698053132B6 /* Pods_SPHTechMobile_Assignment.framework */; };
 		E9EFFC9A6D99BD2FA97C09E7 /* Pods_SPHTechMobile_AssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78ABA2F051D2E45DB268D2A /* Pods_SPHTechMobile_AssignmentTests.framework */; };
 /* End PBXBuildFile section */
@@ -106,7 +111,6 @@
 		9947E7BC24D578A300646F04 /* Collection+Subscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Subscript.swift"; sourceTree = "<group>"; };
 		9947E7BE24D5901100646F04 /* MobileDataUsageEmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageEmptyTableViewCell.swift; sourceTree = "<group>"; };
 		9947E7C024D590F400646F04 /* MobileDataUsageYearlyDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageYearlyDataTableViewCell.swift; sourceTree = "<group>"; };
-		9947E7C324D59F2700646F04 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		9947E7C524D59FBA00646F04 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		9947E7C724D59FCC00646F04 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
 		9947E7C924D5A7D200646F04 /* MobileDataUsageWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageWireframe.swift; sourceTree = "<group>"; };
@@ -126,6 +130,12 @@
 		99A01ECF24D744FC0048E1CB /* MobileYearlyDataUsageModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileYearlyDataUsageModelTests.swift; sourceTree = "<group>"; };
 		99A01ED124D7490D0048E1CB /* MobileDataUsageViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageViewControllerTests.swift; sourceTree = "<group>"; };
 		99A01ED324D7D06A0048E1CB /* MobileDataUsageDatabaseServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageDatabaseServiceTests.swift; sourceTree = "<group>"; };
+		99A01ED524D80AC60048E1CB /* ApiServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceTests.swift; sourceTree = "<group>"; };
+		99A01ED724D81BE00048E1CB /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
+		99A01ED924D81DC90048E1CB /* NetworkConfigTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfigTests.swift; sourceTree = "<group>"; };
+		99A01EDF24D828950048E1CB /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		99A01EE124D839D00048E1CB /* MobileDataUsageSectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataUsageSectionTests.swift; sourceTree = "<group>"; };
+		99A01EE324D83BC80048E1CB /* CGPointExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtensionTests.swift; sourceTree = "<group>"; };
 		9E97E83184C56859A239D8BD /* Pods-SPHTechMobile-AssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPHTechMobile-AssignmentTests.release.xcconfig"; path = "Target Support Files/Pods-SPHTechMobile-AssignmentTests/Pods-SPHTechMobile-AssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
 		A78ABA2F051D2E45DB268D2A /* Pods_SPHTechMobile_AssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SPHTechMobile_AssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF31FCA72C0CAB1A94370337 /* Pods-SPHTechMobile-Assignment-SPHTechMobile-AssignmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPHTechMobile-Assignment-SPHTechMobile-AssignmentUITests.debug.xcconfig"; path = "Target Support Files/Pods-SPHTechMobile-Assignment-SPHTechMobile-AssignmentUITests/Pods-SPHTechMobile-Assignment-SPHTechMobile-AssignmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -257,7 +267,6 @@
 				9947E7E224D5FBFC00646F04 /* Database */,
 				9947E7DC24D5F64D00646F04 /* AppConfig */,
 				9947E7D924D5DF4300646F04 /* APIService */,
-				9947E7C224D59F1600646F04 /* CustomView */,
 				9947E7BB24D5786B00646F04 /* Extensions */,
 				9947E7A824D1EADD00646F04 /* BaseVIPERArchitect */,
 				9947E79F24D1E9D500646F04 /* Networking */,
@@ -334,14 +343,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		9947E7C224D59F1600646F04 /* CustomView */ = {
-			isa = PBXGroup;
-			children = (
-				9947E7C324D59F2700646F04 /* LineChart.swift */,
-			);
-			path = CustomView;
-			sourceTree = "<group>";
-		};
 		9947E7D924D5DF4300646F04 /* APIService */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +385,7 @@
 				99A01ECB24D71F3D0048E1CB /* MobileDataUsageInteractorTests.swift */,
 				99A01ECF24D744FC0048E1CB /* MobileYearlyDataUsageModelTests.swift */,
 				99A01ED124D7490D0048E1CB /* MobileDataUsageViewControllerTests.swift */,
+				99A01EE124D839D00048E1CB /* MobileDataUsageSectionTests.swift */,
 			);
 			path = MobileDataUsage;
 			sourceTree = "<group>";
@@ -392,6 +394,11 @@
 			isa = PBXGroup;
 			children = (
 				99A01ED324D7D06A0048E1CB /* MobileDataUsageDatabaseServiceTests.swift */,
+				99A01ED524D80AC60048E1CB /* ApiServiceTests.swift */,
+				99A01ED724D81BE00048E1CB /* EndpointTests.swift */,
+				99A01ED924D81DC90048E1CB /* NetworkConfigTests.swift */,
+				99A01EDF24D828950048E1CB /* NetworkServiceTests.swift */,
+				99A01EE324D83BC80048E1CB /* CGPointExtensionTests.swift */,
 			);
 			path = Ultilities;
 			sourceTree = "<group>";
@@ -662,7 +669,6 @@
 				9947E7CC24D5A90700646F04 /* MobileDataUsageInteractor.swift in Sources */,
 				9947E7D024D5B8F300646F04 /* NetworkServiceProtocol.swift in Sources */,
 				9947E7D624D5D2A400646F04 /* NetworkConfig.swift in Sources */,
-				9947E7C424D59F2700646F04 /* LineChart.swift in Sources */,
 				9947E7CA24D5A7D200646F04 /* MobileDataUsageWireframe.swift in Sources */,
 				9947E7D824D5D85300646F04 /* NetworkService.swift in Sources */,
 				9947E76424D1CC4F00646F04 /* AppDelegate.swift in Sources */,
@@ -699,8 +705,14 @@
 			files = (
 				99A01ECA24D716660048E1CB /* RecordTests.swift in Sources */,
 				99A01ED024D744FC0048E1CB /* MobileYearlyDataUsageModelTests.swift in Sources */,
+				99A01ED624D80AC60048E1CB /* ApiServiceTests.swift in Sources */,
+				99A01EE424D83BC80048E1CB /* CGPointExtensionTests.swift in Sources */,
 				99A01ED424D7D06A0048E1CB /* MobileDataUsageDatabaseServiceTests.swift in Sources */,
 				99A01ED224D7490D0048E1CB /* MobileDataUsageViewControllerTests.swift in Sources */,
+				99A01EE224D839D00048E1CB /* MobileDataUsageSectionTests.swift in Sources */,
+				99A01ED824D81BE00048E1CB /* EndpointTests.swift in Sources */,
+				99A01EDA24D81DC90048E1CB /* NetworkConfigTests.swift in Sources */,
+				99A01EE024D828960048E1CB /* NetworkServiceTests.swift in Sources */,
 				99A01ECC24D71F3D0048E1CB /* MobileDataUsageInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

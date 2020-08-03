@@ -20,6 +20,8 @@ class MobileDataUsageDatabaseServiceTests: XCTestCase {
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        let databaseService = DatabaseService()
+        databaseService.deleteAll()
     }
 
     func test_GetCachedRecords_ButHasNoDataStoredBefore() throws {
@@ -121,6 +123,7 @@ class MobileDataUsageDatabaseServiceTests: XCTestCase {
     
     func test_ObservableObjects() throws {
         let databaseService = DatabaseService()
+        databaseService.deleteAll()
         
         let disposeBadge = DisposeBag()
         let expectRecievedRecordDatabaseChanged = expectation(description: "recieved record database change")
@@ -231,6 +234,7 @@ class MobileDataUsageDatabaseServiceTests: XCTestCase {
     
     func test_DeleteObjectsByKey() throws {
         let databaseService = DatabaseService()
+        databaseService.deleteAll()
         
         let mockData = self.mock5RecordsData
         databaseService.saveMobileDataUsage(records: mockData)
@@ -257,7 +261,7 @@ class MobileDataUsageDatabaseServiceTests: XCTestCase {
         }
     }
     
-    private var mock5RecordsData: [Record] = {
+    private var mock5RecordsData: [Record] {
         let record1: Record = Record(quarter: "2005-Q4", volume: "0.000801", id: 6)
         let record2: Record = Record(quarter: "2006-Q1", volume: "0.00089", id: 7)
         let record3: Record = Record(quarter: "2006-Q2", volume: "0.001189", id: 8)
@@ -268,6 +272,6 @@ class MobileDataUsageDatabaseServiceTests: XCTestCase {
                 record3,
                 record4,
                 record5]
-    }()
+    }
 
 }

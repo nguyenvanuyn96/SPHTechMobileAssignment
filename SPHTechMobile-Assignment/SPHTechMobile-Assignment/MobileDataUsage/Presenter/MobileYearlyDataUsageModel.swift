@@ -29,12 +29,6 @@ class MobileYearlyDataUsageModel {
         return result
     }
     
-    lazy var lineChartPoints: [CGPoint] = {
-        let points = self.getLineChartPoints()
-        
-        return points
-    }()
-    
     var cellHeight: CGFloat?
     
     init(year: Int) {
@@ -80,25 +74,5 @@ class MobileYearlyDataUsageModel {
         }
         
         self.cellHeight = nil//Reset cellHeight for re-estimate on UI base on the data
-    }
-    
-    private func getLineChartPoints() -> [CGPoint] {
-        var result: [CGPoint] = []
-        
-        let f: (CGFloat) -> CGPoint = {
-            let noiseY = (CGFloat(arc4random_uniform(2)) * 2 - 1) * CGFloat(arc4random_uniform(4))
-            let noiseX = (CGFloat(arc4random_uniform(2)) * 2 - 1) * CGFloat(arc4random_uniform(4))
-            let b: CGFloat = 5
-            let y = 2 * $0 + b + noiseY
-            return CGPoint(x: $0 + noiseX, y: y)
-        }
-
-        let xs = self.records.map({ (recordItem) -> Double in
-            return recordItem.volume
-        })
-        
-        result = xs.map({f(CGFloat($0 * 10))})
-        
-        return result
     }
 }

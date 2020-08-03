@@ -94,7 +94,7 @@ class MobileDataUsageViewControllerTests: XCTestCase {
 
 }
 
-class MobileDataUsagePresenterMock: BasePresenterProtocol & MobileDataUsagePresenterToViewProtocol {
+fileprivate class MobileDataUsagePresenterMock: BasePresenterProtocol & MobileDataUsagePresenterToViewProtocol {
     var dataSourceDrv: Driver<[MobileDataUsageSection]> = PublishSubject<[MobileDataUsageSection]>().asDriver(onErrorJustReturn: [])
     
     var showLoadingDrv: Driver<Bool> = PublishSubject<Bool>().asDriver(onErrorJustReturn: false)

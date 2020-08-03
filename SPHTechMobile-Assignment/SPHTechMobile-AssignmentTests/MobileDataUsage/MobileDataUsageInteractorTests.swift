@@ -164,7 +164,7 @@ class MobileDataUsageInteractorTests: XCTestCase {
 
 }
 
-class ReachabilityMock: ReachabilityProtocol {
+fileprivate class ReachabilityMock: ReachabilityProtocol {
     var isNetworkAvailable: Bool = false
     
     init(isNetworkAvailable: Bool = false) {
@@ -172,7 +172,7 @@ class ReachabilityMock: ReachabilityProtocol {
     }
 }
 
-class MobileDataUsageDatabaseServiceMock: MobileDataUsageDatabaseServiceProtocol {
+fileprivate class MobileDataUsageDatabaseServiceMock: MobileDataUsageDatabaseServiceProtocol {
     private lazy var _cachedRecords: [Int:Record] = [:]
     
     func getMobileDataUsage() -> [Record] {
@@ -201,7 +201,7 @@ class MobileDataUsageDatabaseServiceMock: MobileDataUsageDatabaseServiceProtocol
     }
 }
 
-class MobileDataUsageApiServiceMock: MobileDataUsageApiProtocol {
+fileprivate class MobileDataUsageApiServiceMock: MobileDataUsageApiProtocol {
     private lazy var _mobileDataUsageResponse: MobileDataUsageResponse = {
         let jsonString = """
                 {

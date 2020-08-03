@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/nguyenvanuyn96/SPHTechMobileAssignment/branch/master/graph/badge.svg)](https://codecov.io/gh/nguyenvanuyn96/SPHTechMobileAssignment)
+
 # SPHTechMobileAssignment
 This is the project that I did in the test examination when interviewing at WonderLabs company.
 

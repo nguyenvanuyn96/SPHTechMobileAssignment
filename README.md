@@ -6,6 +6,16 @@ This is the project that I did in the test examination when interviewing at Wond
 ## Requirements: 
 * Xcode Version 11.3 with Swift 5.0
 
+## Building
+Open Terminar, and cd to folder which contains the Podfile of this project. 
+Then run
+```
+$ sudo gem install cocoapods
+$ pod install --repo-update
+
+```
+Open SPHTechMobile-Assignment.xcworkspace in Xcode and build...
+
 ## Architecture concepts/framework used here:
 * VIPER 
 * RxCocoa

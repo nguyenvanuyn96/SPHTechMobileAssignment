@@ -100,7 +100,7 @@ class DatabaseService {
         tryOrLogError { realm.create(T.self, value: value, update: updatePolicy) }
     }
     
-    public func delete<T: RealmSwift.Object>(object: T) {
+    public func delete<T: Object>(object: T) {
         tryOrLogError { realm.delete(object) }
     }
     
